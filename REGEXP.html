@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+<body>
+
+<h2>JavaScript Regular Expressions</h2>
+
+<p>Do a case-insensitive search for "w3schools" in a string:</p>
+
+<p id="demo"></p>
+
+<script>
+let text = "Visit W3Schools";
+let pattern = /w3schools/i;                           //REGULAR EXPRESSIONS
+let result = text.match(pattern);
+
+document.getElementById("demo").innerHTML = result;
+
+
+
+//REGEXP WITH META CHARECTERS
+const chessStory = 'He played the King in a8 and she moved her Queen in c2.';
+const regexpCoordinates = /\w\d/g;
+console.log(chessStory.match(regexpCoordinates));
+
+
+const moods = 'happy 🙂, confused 😕, sad 😢';
+const regexpEmoticons = /[\u{1F600}-\u{1F64F}]/gu;
+console.log(moods.match(regexpEmoticons));
+
+</script>
+
+</body>
+</html>
